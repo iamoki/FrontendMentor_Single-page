@@ -1,0 +1,23 @@
+// 사용되는 컬러 세팅
+$main-color: #755CDE;
+$sub-color: #F6A560;
+$pink: #F39E9E;
+$coral: #EB7565;
+$mint: #61C4B7;
+$burgundy: #552049;
+$black: #030303;
+$gray: #7A746E;
+$white: #FFF7F0;
+
+// 폰트
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+$default-size: 16px;
+
+@function rem($pixSize, $context: $default-size) {
+    @return $pixSize / $context * 1rem;
+}
+
+@mixin heading-L($getSize: 56px, $line-height: 70px) {
+    font-size: rem($getSize);
+    line-height: ($line-height / $getSize);
+}
