@@ -45,14 +45,71 @@ table {
 
 /* 컬러칩 세팅 */
 /* 폰트 세팅 */
+/* flex */
 /* 버튼 기본값 세팅 */
+/* 기본 가로 크기 */
+.inner {
+  width: 1110px;
+  padding: 0 10px;
+  margin: 0 auto;
+  box-sizing: border-box; }
+
 html {
   font-size: 16px; }
 
-h1 {
-  font-size: 3.5rem;
-  line-height: 1.25;
-  color: #030303; }
+button {
+  padding: 14px 45px;
+  border: none;
+  border-radius: 28px;
+  background: #030303;
+  color: #FFF7F0; }
+
+.wrap {
+  background-color: #F2F2F2;
+  padding: 34px 0; }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 4.125rem; }
+
+.main {
+  text-align: center; }
+  .main .text-wrap {
+    margin-bottom: 5rem; }
+    .main .text-wrap h2 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      line-height: 1.25;
+      color: #030303;
+      margin-bottom: 23px; }
+    .main .text-wrap p {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.125rem;
+      font-weight: 500;
+      line-height: 1.55556;
+      color: #7A746E; }
+  .main .patterns-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    height: 19vw;
+    gap: 24px; }
+    .main .patterns-wrap > div {
+      flex: 1;
+      height: 100%; }
+    .main .patterns-wrap .pattern--left {
+      background: #755CDE;
+      border-radius: 8px; }
+    .main .patterns-wrap .pattern--center .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row; }
 
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */
