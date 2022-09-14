@@ -1,4 +1,4 @@
-// 사용되는 컬러 세팅
+/* 컬러칩 세팅 */
 $main-color: #755CDE;
 $sub-color: #F6A560;
 $pink: #F39E9E;
@@ -9,15 +9,50 @@ $black: #030303;
 $gray: #7A746E;
 $white: #FFF7F0;
 
-// 폰트
+/* 폰트 세팅 */
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
-$default-size: 16px;
 
-@function rem($pixSize, $context: $default-size) {
+// 기준 폰트사이즈 
+$base-font-size: 16px;
+
+// rem 사이즈 구하는 함수
+@function rem($pixSize, $context: $base-font-size) {
     @return $pixSize / $context * 1rem;
 }
 
-@mixin heading-L($getSize: 56px, $line-height: 70px) {
+@mixin heading-L($getSize: 56px, $line-height: 70px, $color: $black) {
+    font-size: rem($getSize);
+    line-height: ($line-height / $getSize); // line-height 상대값 구하기
+    color: $color;
+}
+
+@mixin heading-M($getSize: 40px, $line-height: 51px, $color: $black) {
     font-size: rem($getSize);
     line-height: ($line-height / $getSize);
+    color: $color;
+}
+
+@mixin heading-M($getSize: 32px, $line-height: 40px, $color: $black) {
+    font-size: rem($getSize);
+    line-height: ($line-height / $getSize);
+    color: $color ;
+}
+
+@mixin medium($getSize: 18px, $line-height: 28px, $color: $gray) {
+    font-size: rem($getSize);
+    line-height: ($line-height / $getSize);
+    color: $color;
+}
+
+/* 버튼 기본값 세팅 */
+@mixin btn($bg) {
+    padding: 14px 45px;
+    border: none;
+    border-radius: 28px;
+    background: $bg;
+}
+@mixin arrow-btn($bg) {
+    border: none;
+    border-radius: 50%;
+    background: $bg;
 }
