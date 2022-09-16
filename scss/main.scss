@@ -19,6 +19,7 @@ button {
     margin-bottom: rem(66px);
 }
 
+/* 최상단 메인 */
 .main {
     text-align: center;
     .text-wrap {
@@ -47,6 +48,16 @@ button {
             .top {
                 @include flexBox($jc:space-between);
             }
+        }
+    }
+}
+
+/* 슬라이드영역 */
+.slide {
+    .swiper-slide {
+        img {
+            width: 100%;
+            border-radius: 10px;
         }
     }
 }

@@ -1,109 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  <link rel="stylesheet" href="scss/main.scss">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Frontend Mentor | Single-page design portfolio</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+<link rel="stylesheet" href="scss/main.scss">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frontend Mentor | Single-page design portfolio</title>
+<!-- swiper -->
+<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 </head>
 <body>
-  <div class="wrap">
+<div class="wrap">
     <header class="header inner">
-      <h1 class="logo">
-        <img src="/assets/logo.png" alt="logo">
-      </h1>
-      <button class="btn">Free Consultation</button>
+        <h1 class="logo">
+            <img src="/assets/logo.png" alt="logo">
+        </h1>
+        <button class="btn">Free Consultation</button>
     </header>
     <section class="contents">
-      <article class="main inner">
-        <div class="text-wrap">
-          <h2>
-            Design solutions made easy
-          </h2>
-          <p>
-            With over ten years of experience in various design disciplines, I’m your one-stop<br/>shop for your design needs.
-          </p>
-        </div>
-        <div class="patterns-wrap">
-          <div class="pattern--left">
-            <img src="/assets/ptn1.png" alt="petternImg">
-            <strong>Graphic Design</strong>
-          </div>
-          <div class="pattern--center">
-            <div class="top">
-              <div>
-                <img src="/assets/ptn2.png" alt="petternImg">
-                <strong>UI/UX</strong>
-              </div>
-              <div>
-                <img src="/assets/ptn3.png" alt="petternImg">
-                <strong>Apps</strong>
-              </div>
+        <article class="main inner">
+            <div class="text-wrap">
+                <h2>
+                    Design solutions made easy
+                </h2>
+                <p>
+                    With over ten years of experience in various design disciplines, I’m your one-stop<br/>shop for your design needs.
+                </p>
             </div>
-            <div class="bottom">
-              <img src="/assets/ptn4.png" alt="petternImg">
-              <strong>Illustrations</strong>
+            <div class="patterns-wrap">
+                <div class="pattern--left">
+                    <img src="/assets/ptn1.png" alt="petternImg">
+                    <strong>Graphic Design</strong>
+                </div>
+                <div class="pattern--center">
+                    <div class="top">
+                        <div>
+                            <img src="/assets/ptn2.png" alt="petternImg">
+                            <strong>UI/UX</strong>
+                        </div>
+                        <div>
+                            <img src="/assets/ptn3.png" alt="petternImg">
+                            <strong>Apps</strong>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <img src="/assets/ptn4.png" alt="petternImg">
+                        <strong>Illustrations</strong>
+                    </div>
+                </div>
+                <div class="pattern--right">
+                    <div>
+                        <img src="/assets/ptn5.png" alt="petternImg">
+                        <strong>Photography</strong>
+                    </div>
+                    <div>
+                        <img src="/assets/ptn6.png" alt="petternImg">
+                        <strong>Motion Graphics</strong>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="pattern--right">
-            <div>
-              <img src="/assets/ptn5.png" alt="petternImg">
-              <strong>Photography</strong>
+        </article>
+        <article class="descs">
+            <div class="desc">
+                <img class="desc__picture" src="/assets/image-amy.webp" alt="amyPicture">
             </div>
-            <div>
-              <img src="/assets/ptn6.png" alt="petternImg">
-              <strong>Motion Graphics</strong>
+            <div class="desc">
+                <div class="desc__text">
+                    <h3>
+                    I’m Amy, and I’d love to work on your next project
+                    </h3>
+                    <p>
+                    I love working with others to create beautiful design solutions. I’ve designed everything from brand illustrations to complete mobile apps. I’m also handy with a camera!
+                    </p>
+                    <button>
+                    Free Consultation
+                    </button>
+                </div>
             </div>
-          </div>
-        </div>
-      </article>
-      <article class="descs">
-        <div class="desc">
-          <img class="desc__picture" src="/assets/image-amy.webp" alt="amyPicture">
-        </div>
-        <div class="desc">
-          <div class="desc__text">
-            <h3>
-              I’m Amy, and I’d love to work on your next project
-            </h3>
-            <p>
-              I love working with others to create beautiful design solutions. I’ve designed everything from brand illustrations to complete mobile apps. I’m also handy with a camera!
-            </p>
-            <button>
-              Free Consultation
-            </button>
-          </div>
-        </div>
-      </article>
-      <article class="slide">
-        <h2>
-          My Work
-        </h2>
-        <div class="slide"></div>
-        <div class="btn"></div>
-      </article>
-      <article class="readMore">
-        <div class="side--left">
-          <h3>
-            Book a call with me
-          </h3>
-          <p>
-            I’d love to have a chat to see how I can help you. The best first step is for us to discuss your project during a free consultation. Then we can move forward from there.
-          </p>
-        </div>
-        <div class="side--right">
-          <button>Free Consultation</button>
-        </div>
-      </article>
+        </article>
+        <article class="slide">
+            <h2>
+                My Work
+            </h2>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./assets/image-slide-1.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./assets/image-slide-2.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./assets/image-slide-3.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./assets/image-slide-4.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./assets/image-slide-5.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="btn"></div>
+        </article>
+        <article class="readMore">
+            <div class="side--left">
+                <h3>
+                    Book a call with me
+                </h3>
+                <p>
+                    I’d love to have a chat to see how I can help you. The best first step is for us to discuss your project during a free consultation. Then we can move forward from there.
+                </p>
+            </div>
+            <div class="side--right">
+                <button>Free Consultation</button>
+            </div>
+        </article>
     </section>
     <footer class="footer">
-      <h1 class="logo">
-        <img src="/assets/logo.png" alt="logo">
-      </h1>
-      <button class="btn">Free Consultation</button>
+        <h1 class="logo">
+            <img src="/assets/logo.png" alt="logo">
+        </h1>
+        <button class="btn">Free Consultation</button>
     </footer>
-  </div>
+</div>
+<script>
+    new Swiper('.slide .swiper', {
+        slidesPerView: 3, // 슬라이드에 한번에 보여줄 개수
+        spaceBetween: 30, // 슬라이드 사이 여백
+        centeredSlides: true, // 1번 슬라이드가 가운데로 보여지기
+        loop: true,
+        autoplay: {
+            delay: 5000
+        },
+        // pagination: {
+        //     el: '.promotion .swiper-pagination', // 페이지번호 요소 선택
+        //     clickable: true, // 사용자의 페이지 번호 요소 제어
+        // },
+        // navigation: {
+        //     prevEl: '.promotion .swiper-prev',
+        //     nextEl: '.promotion .swiper-next',
+        // }
+    });
+</script>
 </body>
 </html>
