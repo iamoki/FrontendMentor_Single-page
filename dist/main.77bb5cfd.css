@@ -299,5 +299,9 @@ button {
   .footer button:hover {
     background-color: #755CDE; }
 
+@media (max-width: 1110px) {
+  .inner {
+    width: 100%; } }
+
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */
