@@ -62,20 +62,20 @@
                 </div>
             </div>
         </article>
-        <article class="descs">
+        <article class="descs inner">
             <div class="desc">
                 <img class="desc__picture" src="/image-amy.40e54061.webp" alt="amyPicture">
             </div>
             <div class="desc">
                 <div class="desc__text">
                     <h3>
-                    I’m Amy, and I’d love to work on your next project
+                        I’m Amy, and I’d love to work on your next project
                     </h3>
                     <p>
-                    I love working with others to create beautiful design solutions. I’ve designed everything from brand illustrations to complete mobile apps. I’m also handy with a camera!
+                        I love working with others to create beautiful design solutions. I’ve designed everything from brand illustrations to complete mobile apps. I’m also handy with a camera!
                     </p>
                     <button>
-                    Free Consultation
+                        Free Consultation
                     </button>
                 </div>
             </div>
@@ -103,23 +103,32 @@
                     </div>
                 </div>
             </div>
-            <div class="btn"></div>
-        </article>
-        <article class="readMore">
-            <div class="side--left">
-                <h3>
-                    Book a call with me
-                </h3>
-                <p>
-                    I’d love to have a chat to see how I can help you. The best first step is for us to discuss your project during a free consultation. Then we can move forward from there.
-                </p>
+            <div class="swiper-btn">
+                <button class="swiper-prev">
+                    <img src="/bx_arrow-to-left.6704f40c.png" alt="slide left btn">
+                </button>
+                <button class="swiper-next">
+                    <img src="/bx_arrow-to-right.6cb46046.png" alt="slide right btn">
+                </button>
             </div>
-            <div class="side--right">
-                <button>Free Consultation</button>
+        </article>
+        <article class="readMore inner">
+            <div>
+                <div class="side--left">
+                    <h3>
+                        Book a call with me
+                    </h3>
+                    <p>
+                        I’d love to have a chat to see how I can help you. The best first step is for us to discuss your project during a free consultation. Then we can move forward from there.
+                    </p>
+                </div>
+                <div class="side--right">
+                    <button>Free Consultation</button>
+                </div>
             </div>
         </article>
     </section>
-    <footer class="footer">
+    <footer class="footer inner">
         <h1 class="logo">
             <img src="/logo.e9a9c890.png" alt="logo">
         </h1>
@@ -127,7 +136,7 @@
     </footer>
 </div>
 <script>new Swiper('.slide .swiper', {
-  slidesPerView: 3,
+  slidesPerView: "auto",
   // 슬라이드에 한번에 보여줄 개수
   spaceBetween: 30,
   // 슬라이드 사이 여백
@@ -136,15 +145,11 @@
   loop: true,
   autoplay: {
     delay: 5000
-  } // pagination: {
-  //     el: '.promotion .swiper-pagination', // 페이지번호 요소 선택
-  //     clickable: true, // 사용자의 페이지 번호 요소 제어
-  // },
-  // navigation: {
-  //     prevEl: '.promotion .swiper-prev',
-  //     nextEl: '.promotion .swiper-next',
-  // }
-
+  },
+  navigation: {
+    prevEl: '.swiper-btn .swiper-prev',
+    nextEl: '.swiper-btn .swiper-next'
+  }
 });</script>
 </body>
 </html>

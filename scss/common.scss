@@ -1,5 +1,5 @@
 /* 컬러칩 세팅 */
-$background: #F2F2F2;
+$background: #FFF7F0;
 $main-color: #755CDE;
 $sub-color: #F6A560;
 $pink: #F39E9E;
@@ -8,10 +8,10 @@ $mint: #61C4B7;
 $burgundy: #552049;
 $black: #030303;
 $gray: #7A746E;
-$white: #FFF7F0;
+$white: #fff;
 
 /* 폰트 세팅 */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700&display=swap');
 
 // 기준 폰트사이즈 
 $base-font-size: 16px;
@@ -37,7 +37,7 @@ $base-font-size: 16px;
     color: $color;
 }
 
-@mixin heading-M($getSize: 32px, $line-height: 40px, $color: $black) {
+@mixin heading-S($getSize: 32px, $line-height: 40px, $color: $black) {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: rem($getSize);
     line-height: ($line-height / $getSize);
@@ -61,13 +61,24 @@ $base-font-size: 16px;
     flex-direction: $fd;
 }
 
+/* border-radius */
+@mixin bdra($val:8px) {
+    border-radius: $val;
+}
+
 /* 버튼 기본값 세팅 */
 @mixin btn($bg: $black) {
-    padding: 14px 45px;
+    // padding: 14px 45px;
+    width: 228px;
+    height: 56px;
     border: none;
     border-radius: 28px;
-    background: $bg;
+    @include heading-S($getSize: 16px, $line-height:28px);
+    background-color: $bg;
     color: $white;
+    &:hover {
+        cursor: pointer;
+    }
 }
 @mixin arrow-btn($bg) {
     border: none;
@@ -79,7 +90,7 @@ $base-font-size: 16px;
 /* 기본 가로 크기 */
 .inner {
     width: 1110px;
-    padding: 0 10px;
+    padding: 0 40px;
     margin: 0 auto;
     box-sizing: border-box;
 }

@@ -3,6 +3,7 @@
 
 html {
     font-size: $base-font-size;
+    background-color: $background;
 }
 
 button {
@@ -17,11 +18,15 @@ button {
 .header {
     @include flexBox($jc:space-between);
     margin-bottom: rem(66px);
+    button:hover {
+        background-color: $main-color;
+    }
 }
 
 /* 최상단 메인 */
 .main {
     text-align: center;
+    margin-bottom: rem(136px);
     .text-wrap {
         margin-bottom: rem(80px);
         h2 {
@@ -34,19 +39,132 @@ button {
     }
     .patterns-wrap {
         @include flexBox($jc:space-between);
-        height: 19vw;
         gap: 24px;
         & > div {
             flex: 1;
-            height: 100%;
+            height: 364px;
+            box-sizing: border-box;
+        }
+        & strong {
+            @include heading-S($getSize:24px, $line-height:30.24px, $color: $white);
         }
         .pattern--left {
+            position: relative;
+            padding: 24px;
+            @include bdra;
             background: $main-color;
-            border-radius: 8px;
+            & > * {
+                position: absolute;
+            }
+            & > img {
+                top: 24px;
+                right: 24px;
+            }
+            & > strong {
+                bottom: 24px;
+                left: 24px;
+            }
         }
         .pattern--center {
             .top {
                 @include flexBox($jc:space-between);
+                gap: 24px;
+                height: 182px;
+                margin-bottom: 24px;
+                & > div {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    @include bdra;
+                    & > * {
+                        position: absolute;
+                    }
+                    & > img {
+                        top: 24px;
+                        right: 24px;
+                    }
+                    & > strong {
+                        bottom: 24px;
+                        left: 24px;
+                    }
+                }
+                & > div:nth-child(1) {
+                    background-color: $sub-color;
+                }
+                & > div:nth-child(2) {
+                    background-color: $pink;
+                }
+            }
+            .bottom {
+                position: relative;
+                height: 158px;
+                @include bdra;
+                background-color: $coral;
+                & > * {
+                    position: absolute;
+                }
+                & > img {
+                    top: 24px;
+                    right: 24px;
+                }
+                & > strong {
+                    bottom: 24px;
+                    left: 24px;
+                }
+            }
+        }
+        .pattern--right {
+            & > div {
+                position: relative;
+                @include bdra;
+                * {
+                    position: absolute;
+                }
+                &:nth-child(1) {
+                    height: 182px;
+                    margin-bottom: 24px;
+                    background-color: $mint;
+                }
+                &:nth-child(2) {
+                    height: 158px;
+                    background-color: $burgundy;
+                }
+                & > img {
+                    top: 24px;
+                    right: 24px;
+                }
+                & > strong {
+                    bottom: 24px;
+                    left: 24px;
+                }
+            }
+        }
+    }
+}
+
+/* desc영역 */
+.descs {
+    @include flexBox($jc: space-between);
+    gap: 125px;
+    margin-bottom: rem(88px);
+    .desc {
+        img {
+            max-width: 445px;
+        }
+        .desc__text {
+            h3 {
+                @include heading-M;
+                margin-bottom: 34px;
+            }
+            p {
+                @include medium;
+                margin-bottom: 32px;
+            }
+            button {
+                background-color: $coral;
+                &:hover {
+                    background-color: $sub-color;
+                }
             }
         }
     }
@@ -54,10 +172,82 @@ button {
 
 /* 슬라이드영역 */
 .slide {
-    .swiper-slide {
+    margin-bottom: rem(88px);
+    h2 {
+        text-align: center;
+        @include heading-S;
+        margin-bottom: rem(56px);
+    }
+    .swiper {
+        margin-bottom: 56px;
+        .swiper-slide {
+            // width: calc(50% - 315px);
+            width: 625px;
+        }
         img {
             width: 100%;
-            border-radius: 10px;
+            @include bdra;
         }
+    }
+    .swiper-btn {
+        @include flexBox;
+        text-align: center;
+        & > button {
+            width: 64px;
+            height: 64px;
+            @include arrow-btn($black);
+            line-height: 64px;
+            &:nth-child(1) {
+                margin-right: 16px;
+            }
+        }
+    }
+}
+
+/* 하단 desc */
+.readMore {
+    & > div {
+        @include flexBox($jc:space-between);
+        gap: 182px;
+        height: 320px;
+        margin-bottom: 56px;
+        padding: 0 65px;
+        @include bdra;
+        background-color: $black;
+        box-sizing: border-box;
+    }
+    .side--left {
+        h3 {
+            @include heading-M($color: $white);
+            margin-bottom: 25px;
+        }
+        p {
+            @include medium($color: $white);
+        }
+    }
+    .side--right {
+        button {
+            background-color: $coral;
+            &:hover {
+                background-color: $sub-color;
+            }
+        }
+    }
+}
+
+/* footer */
+.footer {
+    @include flexBox($jc: space-between);
+    button {
+        &:hover {
+            background-color: $main-color;
+        }
+    }
+}
+
+// 반응형
+@media (max-width: 1110px) {
+    .inner {
+        width: 100% !important;
     }
 }
