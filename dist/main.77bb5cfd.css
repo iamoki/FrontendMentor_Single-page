@@ -51,7 +51,6 @@ table {
 /* 기본 가로 크기 */
 .inner {
   width: 1110px;
-  padding: 0 40px;
   margin: 0 auto;
   box-sizing: border-box; }
 
@@ -122,8 +121,19 @@ button {
       line-height: 1.26;
       font-weight: 700;
       color: #fff; }
+    .main .patterns-wrap .mo-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+      gap: 24px; }
+      .main .patterns-wrap .mo-top > div {
+        flex: 1;
+        min-width: 354px;
+        box-sizing: border-box; }
     .main .patterns-wrap .pattern--left {
       position: relative;
+      height: 100%;
       padding: 24px;
       border-radius: 8px;
       background: #755CDE; }
@@ -173,24 +183,28 @@ button {
       .main .patterns-wrap .pattern--center .bottom > strong {
         bottom: 24px;
         left: 24px; }
-    .main .patterns-wrap .pattern--right > div {
-      position: relative;
-      border-radius: 8px; }
-      .main .patterns-wrap .pattern--right > div * {
-        position: absolute; }
-      .main .patterns-wrap .pattern--right > div:nth-child(1) {
-        height: 182px;
-        margin-bottom: 24px;
-        background-color: #61C4B7; }
-      .main .patterns-wrap .pattern--right > div:nth-child(2) {
-        height: 158px;
-        background-color: #552049; }
-      .main .patterns-wrap .pattern--right > div > img {
-        top: 24px;
-        right: 24px; }
-      .main .patterns-wrap .pattern--right > div > strong {
-        bottom: 24px;
-        left: 24px; }
+    .main .patterns-wrap .pattern--right {
+      max-width: 354px; }
+      .main .patterns-wrap .pattern--right > div {
+        position: relative;
+        max-width: 354px;
+        box-sizing: border-box;
+        border-radius: 8px; }
+        .main .patterns-wrap .pattern--right > div * {
+          position: absolute; }
+        .main .patterns-wrap .pattern--right > div:nth-child(1) {
+          height: 182px;
+          margin-bottom: 24px;
+          background-color: #61C4B7; }
+        .main .patterns-wrap .pattern--right > div:nth-child(2) {
+          height: 158px;
+          background-color: #552049; }
+        .main .patterns-wrap .pattern--right > div > img {
+          top: 24px;
+          right: 24px; }
+        .main .patterns-wrap .pattern--right > div > strong {
+          bottom: 24px;
+          left: 24px; }
 
 /* desc영역 */
 .descs {
@@ -235,7 +249,7 @@ button {
   .slide .swiper {
     margin-bottom: 56px; }
     .slide .swiper .swiper-slide {
-      width: 625px; }
+      width: 540px; }
     .slide .swiper img {
       width: 100%;
       border-radius: 8px; }
@@ -299,9 +313,17 @@ button {
   .footer button:hover {
     background-color: #755CDE; }
 
+@media (max-width: 1200px) {
+  .inner {
+    padding: 0 40px; } }
+
 @media (max-width: 1110px) {
   .inner {
     width: 100%; } }
+
+@media (max-width: 960px) {
+  html {
+    font-size: 12.6px; } }
 
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */

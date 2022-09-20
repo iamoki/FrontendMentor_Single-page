@@ -48,8 +48,18 @@ button {
         & strong {
             @include heading-S($getSize:24px, $line-height:30.24px, $color: $white);
         }
+        .mo-top {
+            @include flexBox($jc:space-between);
+            gap: 24px;
+            & > div {
+                flex: 1;
+                min-width: 354px;
+                box-sizing: border-box;
+            }
+        }
         .pattern--left {
             position: relative;
+            height: 100%;
             padding: 24px;
             @include bdra;
             background: $main-color;
@@ -114,8 +124,11 @@ button {
             }
         }
         .pattern--right {
+            max-width: 354px;
             & > div {
                 position: relative;
+                max-width: 354px;
+                box-sizing: border-box;
                 @include bdra;
                 * {
                     position: absolute;
@@ -182,7 +195,7 @@ button {
         margin-bottom: 56px;
         .swiper-slide {
             // width: calc(50% - 315px);
-            width: 625px;
+            width: 540px;
         }
         img {
             width: 100%;
@@ -246,12 +259,21 @@ button {
 }
 
 // 반응형
+@media (max-width: 1200px) {
+    .inner {
+        padding: 0 40px;
+    }
+}
+
 @media (max-width: 1110px) {
     .inner {
         width: 100%;
     }
 }
 
-@media (max-width: 840px) {
-    
+@media (max-width: 960px) {
+    $base-font-size: 12.6px;
+    html {
+        font-size: $base-font-size;
+    }
 }
