@@ -315,7 +315,7 @@ button {
 
 @media (max-width: 1200px) {
   html {
-    font-size: 12.6px; }
+    font-size: 14px; }
   .inner {
     width: 100%;
     padding: 0 40px; }
@@ -365,6 +365,57 @@ button {
     gap: 26px; }
   .readMore .side--left {
     text-align: center; } }
+
+@media (max-width: 768px) {
+  html {
+    font-size: 10px; }
+  button {
+    width: 176px;
+    height: 44px; }
+  .inner {
+    width: 100%;
+    padding: 0 16px; }
+  .wrap {
+    padding: 16px 0; }
+  .logo {
+    width: 48px; }
+    .logo img {
+      width: 100%; }
+  .main .text-wrap {
+    margin-bottom: 2rem; }
+    .main .text-wrap h2 {
+      margin-bottom: 16px; }
+  .main .patterns-wrap {
+    max-width: 100%; }
+    .main .patterns-wrap > div {
+      height: auto; }
+    .main .patterns-wrap .mo-top {
+      flex-direction: column; }
+      .main .patterns-wrap .mo-top > div {
+        width: 100%;
+        flex: unset; }
+    .main .patterns-wrap .pattern--right {
+      flex-direction: column;
+      gap: 24px; }
+      .main .patterns-wrap .pattern--right > div {
+        width: 100%; }
+  .descs {
+    gap: 40px;
+    flex-direction: column;
+    transform: unset; }
+    .descs .desc:nth-child(1) {
+      width: 300px; }
+    .descs .desc .desc__text {
+      text-align: center; }
+      .descs .desc .desc__text h3,
+      .descs .desc .desc__text p {
+        margin-bottom: 24px; }
+  .slide .swiper .swiper-slide {
+    width: 270px; }
+  .slide .swiper-btn button {
+    line-height: 71px; }
+  .readMore > div {
+    padding: 0 24px; } }
 
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */

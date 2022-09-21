@@ -260,7 +260,7 @@ button {
 
 // 반응형
 @media (max-width: 1200px) {
-    $base-font-size: 12.6px;
+    $base-font-size: 14px;
     html {
         font-size: $base-font-size;
     }
@@ -334,6 +334,100 @@ button {
         }
         .side--left {
             text-align: center;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    $base-font-size: 10px;
+    html {
+        font-size: $base-font-size;
+    }
+
+    button {
+        width: 176px;
+        height: 44px;
+    }
+
+    .inner {
+        width: 100%;
+        padding: 0 16px;
+    }
+    
+    .wrap {
+        padding: 16px 0;
+    }
+
+    .logo {
+        width: 48px;
+        img {
+            width: 100%;
+        }
+    }
+
+    .main {
+        .text-wrap {
+            margin-bottom: rem(32px);
+            h2 {
+                margin-bottom: 16px;
+            }
+        };
+        .patterns-wrap {
+            max-width: 100%;
+            & > div {
+                height: auto;
+            }
+            .mo-top {
+                flex-direction: column;
+                & > div {
+                    width: 100%;
+                    flex: unset;
+                }
+            }
+            .pattern--right {
+                flex-direction: column;
+                gap: 24px;
+                & > div {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .descs {
+        gap: 40px;
+        flex-direction: column;
+        transform: unset;
+        .desc {
+            &:nth-child(1) {
+                width: 300px;
+            }
+            .desc__text {
+                text-align: center;
+                h3,
+                p {
+                    margin-bottom: 24px;
+                }
+            }
+        }
+    }
+
+    .slide {
+        .swiper {
+            .swiper-slide {
+                width: 270px;
+            }
+        }
+        .swiper-btn {
+            button {
+                line-height: 71px;
+            }
+        }
+    }
+
+    .readMore {
+        & > div {
+            padding: 0 24px;
         }
     }
 }
