@@ -5,6 +5,7 @@
 - [개요](#개요)
   - [진행과제](#진행과제)
   - [스크린샷](#스크린샷)
+  - [링크](#링크)
 - [진행과정](#진행과정)
   - [사용언어와 라이브러리](#사용언어와-라이브러리)
   - [터득내용](#터득내용)
@@ -25,6 +26,8 @@
 ![3](https://user-images.githubusercontent.com/76725512/191451378-e4e952cc-d30f-4138-993c-c897847aff75.JPG)
 ![4](https://user-images.githubusercontent.com/76725512/191451383-5384c743-164e-4f6b-bb48-57aaa3dcf1ed.JPG)
 
+### 링크
+- [go-page](https://swiperjs.com/)
 
 ## 진행과정
 
@@ -33,7 +36,7 @@
 - Semantic HTML5 markup
 - SCSS
 - Flexbox
-- [Swiper](https://swiperjs.com/) - slide library
+- [Swiper](https://okhee-singlepage.netlify.app/) - slide library
 
 
 ### 터득내용
