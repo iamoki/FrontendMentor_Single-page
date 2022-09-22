@@ -27,7 +27,7 @@
 ![4](https://user-images.githubusercontent.com/76725512/191451383-5384c743-164e-4f6b-bb48-57aaa3dcf1ed.JPG)
 
 ### 링크
-- [go-page](https://swiperjs.com/)
+- [go-page](https://okhee-singlepage.netlify.app/)
 
 ## 진행과정
 
@@ -36,7 +36,7 @@
 - Semantic HTML5 markup
 - SCSS
 - Flexbox
-- [Swiper](https://okhee-singlepage.netlify.app/) - slide library
+- [Swiper](https://swiperjs.com/) - slide library
 
 
 ### 터득내용
