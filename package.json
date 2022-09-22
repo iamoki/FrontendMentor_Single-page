@@ -1,6 +1,8 @@
 {
   "devDependencies": {
+    "cssnano": "^5.1.13",
     "node-sass": "^7.0.3",
+    "postcss": "^8.4.16",
     "sass": "^1.54.9"
   }
 }
